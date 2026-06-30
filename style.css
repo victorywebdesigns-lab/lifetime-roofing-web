@@ -2,7 +2,6 @@
    DESIGN TOKENS & RESET
    ========================================================================== */
 :root {
-    /* Color System from Truck Wrap / Brand Assets */
     --clr-primary: #311A5E;        /* Deep Royal Purple */
     --clr-primary-light: #44287C;
     --clr-accent: #F4B324;         /* Signal Gold */
@@ -12,11 +11,9 @@
     --clr-white: #FFFFFF;
     --clr-gray: #6C757D;
     
-    /* Typography Design Tokens */
     --ff-headings: 'Syne', sans-serif;
     --ff-body: 'Plus Jakarta Sans', sans-serif;
     
-    /* Global Transitions & Layout Layouts */
     --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
     --radius-md: 8px;
     --radius-lg: 16px;
@@ -133,7 +130,6 @@ body {
     top: 0;
     z-index: 1000;
     padding: 16px 0;
-    transition: padding 0.3s var(--transition-smooth);
 }
 
 .nav-container {
@@ -208,7 +204,7 @@ body {
 }
 
 /* ==========================================================================
-   HERO INTERACTIVE ARCHITECTURE
+   HERO ARCHITECTURE
    ========================================================================== */
 .hero-section {
     padding: 80px 0;
@@ -261,16 +257,6 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-.fallback-hero-image {
-    background-color: var(--clr-primary);
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255,255,255,0.4);
-    font-weight: 500;
-}
-
 .ui-mock-badge {
     position: absolute;
     top: 24px;
@@ -290,7 +276,8 @@ body {
 .trust-ribbon {
     background-color: var(--clr-light);
     padding: 24px 0;
-    border-y: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .ribbon-flex {
@@ -432,7 +419,6 @@ body {
     font-family: var(--ff-body);
     font-size: 0.95rem;
     color: var(--clr-dark);
-    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus, .form-group select:focus {
@@ -480,7 +466,27 @@ body {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .desktop-nav, .phone-btn {
+    
+    /* Fixed Mobile Layout System */
+    .desktop-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--clr-white);
+        padding: 24px;
+        box-shadow: var(--shadow-lg);
+        border-bottom: 2px solid var(--clr-primary);
+        gap: 20px;
+    }
+
+    .desktop-nav.active {
+        display: flex;
+    }
+    
+    .phone-btn {
         display: none;
     }
     .mobile-nav-toggle {
@@ -502,7 +508,7 @@ body {
         padding: 12px 0;
     }
     body {
-        padding-bottom: 56px; /* Dynamic offset logic for sticky action layout */
+        padding-bottom: 56px;
     }
     .sticky-action-bar {
         display: grid;
