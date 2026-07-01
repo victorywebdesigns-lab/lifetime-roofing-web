@@ -5,27 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifetime Roofing | Premium Roofing & Lifetime Protection</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Premium Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Embedded Style Block to Ensure the Hero Image Displays Perfectly with Single Extension -->
     <style>
         .hero-section {
             background: linear-gradient(rgba(26, 11, 56, 0.85), rgba(26, 11, 56, 0.85)), 
                         url('Gemini_Generated_Image_xqv4j4xqv4j4xqv4.png') no-repeat center center/cover !important;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        .gallery-img-wrapper {
+            width: 100%;
+            height: 250px; /* Locks down a stable container height */
+            overflow: hidden;
+            background: #1a0b38;
+        }
+        .gallery-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Prevents stretching and distortion */
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+        .main-team-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
 
-    <!-- UTILITY TOP HEADER -->
     <div class="utility-bar">
         <div class="utility-container">
             <div class="promo-text">
                 <i class="fa-solid fa-bolt animate-flash"></i> Same-Day Service Available! Call Now: <strong>(222) 527-7663</strong>
             </div>
             <div class="utility-actions">
-                <!-- FIXED: Easy Financing button routes instantly to the Interactive Estimate box -->
                 <a href="#estimate" class="util-btn"><i class="fa-solid fa-wallet"></i> Easy Financing</a>
                 <a href="#reviews" class="util-btn"><i class="fa-solid fa-star"></i> Read Our Reviews</a>
                 <a href="#locations" class="util-btn region-btn">Houston <i class="fa-solid fa-chevron-right"></i></a>
@@ -33,7 +50,6 @@
         </div>
     </div>
 
-    <!-- MAIN NAV HEADER -->
     <header class="main-header">
         <div class="header-container">
             <a href="#" class="logo-area">
@@ -46,7 +62,6 @@
                 </div>
             </a>
 
-            <!-- Universal Navigation Menu -->
             <nav class="nav-menu" id="navMenu">
                 <a href="#" class="nav-item active">HOME</a>
                 <div class="dropdown">
@@ -78,7 +93,6 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section id="home" class="hero-section">
         <div class="hero-container">
             <div class="hero-content">
@@ -91,7 +105,6 @@
                 </div>
             </div>
 
-            <!-- Interactive Estimate Applet Box -->
             <div class="estimate-box" id="estimate">
                 <div class="estimate-header">
                     <h3>INTERACTIVE ESTIMATE</h3>
@@ -131,7 +144,6 @@
         </div>
     </section>
 
-    <!-- CERTIFICATIONS BAR -->
     <div class="certifications-bar">
         <div class="cert-container">
             <h3>OUR TRUSTED PLATINUM PARTNERSHIPS</h3>
@@ -144,7 +156,6 @@
         </div>
     </div>
 
-    <!-- SERVICES SECTION -->
     <section id="services" class="services-section">
         <div class="section-title-wrap">
             <h2>Our Specialized Roofing Services</h2>
@@ -174,11 +185,10 @@
         </div>
     </section>
 
-    <!-- TEAM SECTION -->
     <section id="about" class="team-section">
         <div class="team-container">
             <div class="team-image-side" style="position: relative;">
-                <img src="roofing.jpg" alt="Lifetime Roofing Team Estimating Room" class="main-team-img">
+                <img src="roofing.jpg" alt="Lifetime Roofing Team" class="main-team-img">
                 <div class="image-floating-badge">
                     <h4>Operations & Estimating HQ</h4>
                 </div>
@@ -196,7 +206,6 @@
         </div>
     </section>
 
-    <!-- INSURANCE CLAIMS SECTION -->
     <section id="insurance" class="insurance-section">
         <div class="section-title-wrap">
             <h2>Hassle-Free Insurance Claims Matrix</h2>
@@ -232,7 +241,6 @@
         </div>
     </section>
 
-    <!-- PROJECT GALLERY SECTION (FIXED: Image targets match single extension format) -->
     <section id="gallery" class="gallery-section">
         <div class="section-title-wrap">
             <h2>Completed Premium Masterpieces</h2>
@@ -274,7 +282,6 @@
         </div>
     </section>
 
-    <!-- DYNAMIC PAGINATED REVIEWS SECTION -->
     <section id="reviews" class="reviews-section">
         <div class="section-title-wrap">
             <h2>Verified Customer Testimony</h2>
@@ -343,7 +350,6 @@
         </div>
     </section>
 
-    <!-- REGIONAL HUB LOCATION MATRIX -->
     <section id="locations" class="locations-section">
         <div class="section-title-wrap">
             <h2>Our Operational Locations</h2>
@@ -378,7 +384,7 @@
         <div id="slidell" class="location-content">
             <div class="loc-details-card">
                 <h3><i class="fa-solid fa-warehouse"></i> East Louisiana Regional Office</h3>
-                <p><strong>Mailing Address:</strong> 61103 Airport Road, Suite E, Slidell, LA 70460</p>
+                <p><strong>Mailing Address:</strong> 61103 Airport Road, Suite E, Slidell, LA 48106</p>
                 <p class="phone-highlight"><i class="fa-solid fa-phone"></i> Direct Line: <a href="tel:9852610182">(985) 261-0182</a></p>
                 <span class="hub-tag">Northshore Dispatch Center</span>
             </div>
@@ -394,7 +400,6 @@
         </div>
     </section>
 
-    <!-- CONTACT CONTEXT -->
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <div class="contact-info">
@@ -436,7 +441,6 @@
         </div>
     </section>
 
-    <!-- CORPORATE SYSTEM FOOTER -->
     <footer class="corporate-footer">
         <div class="footer-top-matrix">
             <div class="matrix-column brand-column">
@@ -462,7 +466,7 @@
                 <ul class="footer-links">
                     <li><a href="#about">About Our Crew</a></li>
                     <li><a href="#reviews">Learning Center & Reviews</a></li>
-                    <li><a href="#financing">Financing Solutions</a></li>
+                    <li><a href="#estimate">Financing Solutions</a></li>
                     <li><a href="#contact">Contact Dispatch</a></li>
                 </ul>
             </div>
@@ -492,7 +496,6 @@
         </div>
     </footer>
 
-    <!-- LIVE STICKY MOBILE ACTION BAR -->
     <div class="sticky-action-bar">
         <a href="tel:2225277663" class="sticky-action-item call-action">
             <i class="fa-solid fa-phone"></i> CALL NOW: (222) 527-7663
@@ -502,7 +505,6 @@
         </a>
     </div>
 
-    <!-- ENGINE CODE -->
     <script>
         // NAVIGATION CONTROLLER
         const menuToggle = document.getElementById('menuToggle');
